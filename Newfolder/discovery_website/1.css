@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    overflow-x: hidden;
+
+}
+header {
+    position: relative;
+    height: 69vh;
+    width: 100%;
+    background-image: url(navBar.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+h3{
+    color: white;
+    position: absolute;
+    top: 150px;
+    left: 42%;
+    font-size: 4em;
+     font-family: "Pacifico", cursive;
+     font-weight: 100;
+}
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 75px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+nav img{
+    height: 40px;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+}
+.text a{
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-right: 35px;
+    font-family: "Play", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+a::before{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out 0s;
+}
+a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+a:hover{
+    color: rgb(0, 255, 0);
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.images img{
+    width: 33%;
+    height: 250px;
+    transition: all 0.2s ease-in-out 0s;
+    cursor: pointer;
+}
+.images img:hover{
+    transform: scale(1.02);
+    box-shadow: 5px 5px 20px rgb(255, 217, 0);
+}
+.headings {
+  display: flex;
+  background-color: #000;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.headings div {
+  color: #fff;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 2em;
+  font-family: "Big Shoulders Inline", sans-serif;
+}
+
+
+
+html {
+    scroll-behavior:smooth;
+}
+.vdd{
+    margin-top: 40px;
+    position: relative;
+}
+.video{
+    height: 600px;
+    width: 100vw;
+    object-fit: cover;
+}
+p{
+    color: white;
+    position: absolute;
+    top: 244px;
+    left: 273px;
+    font-size: 80px;
+    font-family: "Zen Dots", sans-serif;
+}
+.exp1,.exp2,.exp3 {
+    height: 650px;
+    width: 33vw;
+    position: relative;
+    overflow: hidden; /* prevents overflow on zoom */
+    cursor: pointer;
+}
+
+.exp1::before,.exp2::before,.exp3::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+}
+.exp1::before{
+  background-image: url("exp.avif");
+}
+.exp2::before{
+    background-image: url("life.avif");
+}
+.exp3::before{
+    background-image: url("well.avif");
+}
+.exp1:hover::before,.exp2:hover::before,.exp3:hover::before {
+    transform: scale(1.1);  /* zoom effect inside box */
+}
+.exp1:hover,.exp2:hover,.exp3:hover{
+    .btn{
+        background-color: rgb(255, 255, 255);
+    }
+    .btn i{
+        display: block;
+    }
+}
+
+.btn{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    border: 1px solid white;
+    top: 57%;
+    left: 44%;
+    transition: all 0.3s ease-in-out 0s;
+}
+.expp{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 47%;
+    left: 26%;
+    font-family: "Zen Dots", sans-serif;
+}
+.btn i{
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    font-size: 25px;
+    color: #000000;
+    display: none;
+    transition: all 0.3s ease-in-out 0s;
+}
+.bigi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    height: 300px;
+    background-color: black;
+}
+.img{
+    margin: 45px 45px;
+}
+.img img{
+    height: 60px;
+    width: 60px;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sites{
+    margin-right: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 150px;
+    height: 200px;
+    position: relative;
+}
+.one,.two,.three{
+    padding: 20px;
+}
+.one a,.two a,.three a{
+    font-size: 18px;
+    font-family: "Strait", sans-serif;
+}
+
+#about,#expp{
+    padding:7px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out 0s;
+}
